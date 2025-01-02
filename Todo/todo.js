@@ -4,6 +4,7 @@ const filepath = './tasks.json'
 let command = process.argv[2]
 let argument = process.argv[3]
 
+// Loading The Filedata to make changes in it
 let loadData = ()=>{
     try{
         let dataBuffer = fs.readFileSync(filepath)
@@ -13,6 +14,8 @@ let loadData = ()=>{
         return []
     }
 }
+
+//Saving our changes to File again
 let saveTask = (tasks)=>{
     try{
         let dataJson = JSON.stringify(tasks)
